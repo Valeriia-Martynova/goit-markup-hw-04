@@ -134,7 +134,10 @@ main {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/people-office1.jpg);
+    url(../images/people-office1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .top .container {
@@ -222,11 +225,20 @@ h3 {
   gap: 24px;
 }
 .about-us-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
   width: calc((100% - 72px) / 4);
+}
+
+.icon-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  padding: 24px 0;
+  max-width: 264px;
+  max-height: 112px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
 }
 
 .three-line-name {
