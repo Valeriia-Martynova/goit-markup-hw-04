@@ -275,6 +275,7 @@ h3 {
   background: #fff;
   width: calc((100% - 72px) / 4);
 }
+
 .container-card {
   padding: 32px 0;
 }
@@ -311,6 +312,29 @@ h3 {
   row-gap: 48px;
 }
 
+.overlay {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 40px 32px 164px 32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.row-item:hover .overlay {
+  transform: translateY(0);
+}
+
 .app {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -320,6 +344,14 @@ h3 {
 .row-item {
   background: #fff;
   width: calc((100% - 48px) / 3);
+  overflow: hidden;
+  position: relative;
+}
+
+.row-item:hover,
+.row-item:focus {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 footer {
@@ -354,4 +386,41 @@ footer {
   color: #f4f4fd;
   flex-basis: 100px;
   width: 264px;
+}
+
+.social-footer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.icon-social-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  padding: 8px 0;
+  list-style-type: none;
+}
+
+.icon-social-footer .icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.icon-social-footer .icon-social {
+  fill: #fff;
+}
+
+.container-link {
+  display: flex;
 }
