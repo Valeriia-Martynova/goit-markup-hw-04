@@ -151,7 +151,7 @@ main {
 }
 .section-hero-image {
   background-color: #2e2f42;
-  width: 1440px;
+  max-width: 1440px;
   height: 600px;
   padding: 188px 0;
   background-image: linear-gradient(
@@ -205,13 +205,11 @@ main {
   text-align: center;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:hover {
-  background: #404bbf;
-}
+button:hover,
 button:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 
 h2 {
@@ -326,16 +324,12 @@ h3 {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
-  fill: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-social-card .link-social:hover {
+.icon-social-card .link-social:hover,
+.icon-social-card .link-social:focus {
   background-color: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-icon-social-card .link-social:focus {
-  background-color: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .row {
@@ -344,6 +338,9 @@ icon-social-card .link-social:focus {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 48px;
+}
+.icon-social {
+  fill: #f4f4fd;
 }
 
 .row-item {
@@ -363,12 +360,11 @@ icon-social-card .link-social:focus {
 .overlay-sumb {
   font-weight: 400;
   font-size: 16px;
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: #4d5ae5;
-
   font-family: sans-serif;
   position: absolute;
   top: 0;
@@ -376,6 +372,7 @@ icon-social-card .link-social:focus {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .row-item:hover .overlay-sumb {
@@ -414,10 +411,11 @@ icon-social-card .link-social:focus {
 
 .foot-page .container {
   display: flex;
+  align-items: baseline;
 }
 
 .container-logo {
-  padding-right: 120px;
+  margin-right: 120px;
 }
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -451,6 +449,7 @@ icon-social-card .link-social:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .icon-social-footer {
@@ -474,16 +473,24 @@ icon-social-card .link-social:focus {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.icon-social-footer .link-social {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-social-footer .link-social:hover,
+.icon-social-footer .link-social:focus {
+  background-color: #31d0aa;
+}
+
 .icon-social-footer .icon-social {
-  fill: #fff;
-}
-
-.icon-social-footer .icon-link:hover {
-  background-color: #31d0aa;
-}
-
-.icon-social-footer .icon-link:focus {
-  background-color: #31d0aa;
+  fill: #f4f4fd;
 }
 
 .container-link {
